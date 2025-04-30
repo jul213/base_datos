@@ -19,6 +19,11 @@ public class AdminKafka {
         //nombre de los servicios que se ejecutan en la instancia de base de datos
         props.put("oracle.service.name", "jwt");
         props.put("security.protocol", "PLAINTEXT");
+
+
+        try (Admin admin = AdminClient.create(props)){
+            
+        }
     }
 }
 
