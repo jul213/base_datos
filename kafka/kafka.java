@@ -22,7 +22,10 @@ public class AdminKafka {
 
 
         try (Admin admin = AdminClient.create(props)){
-            
+
+            //lugar donde estan las propiedades guardadas usuario y contraseña
+            props.put("oracle.net.tns_admin", ".");
+
         }
     }
 }
