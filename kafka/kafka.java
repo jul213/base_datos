@@ -27,7 +27,15 @@ public class AdminKafka {
 
                 CreateTopicsResult result = admin.createTopics(
                     // creamos el topico llamado teq con 10 particiones
-                    Arrays.asList(new NewTopic("TEQ", 10, (short) 0 ))
+                    Arrays.asList(new NewTopic("TEQ", 10, (short) 0 ));
+
+                    try {
+                        KafkaFuture<void> ftr= result.all();
+                        ftr.get();
+                    } catch (InterruptedException | ExecutionException e){
+                        
+                        throw new IlegalStateException(e);
+                    }
                 )
         }
     }
