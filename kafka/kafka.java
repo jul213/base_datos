@@ -36,7 +36,11 @@ public class AdminKafka {
                         
                         throw new IlegalStateException(e);
                     }
+                    System.out.println("perfect closing the admin OKAFKA now");
                 )
+        } catch (Exception e){
+            System.out.println("exception while creating the topic" + e);
+            e.printStackTrace();
         }
     }
 }
