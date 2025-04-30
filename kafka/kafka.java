@@ -25,7 +25,10 @@ public class AdminKafka {
 
         try (Admin admin = AdminClient.create(props)){
 
-
+                CreateTopicsResult result = admin.createTopics(
+                    // creamos el topico llamado teq con 10 particiones
+                    Arrays.asList(new NewTopic("TEQ", 10, (short) 0 ))
+                )
         }
     }
 }
