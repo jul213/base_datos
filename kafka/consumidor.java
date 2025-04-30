@@ -13,4 +13,9 @@ import org.apache.kafka.clients.consumer.ConsumerRebalanceListener;
 import org.apache.kafka.clients.consumer.consumerRecord;
 import org.oracle.okafka.clients.consumer.KafkaConsumer;
 
+public class Consumer {
 
+    static class ConsumerRebalance implements ConsumerRebalanceListener {
+        
+    }
+}
