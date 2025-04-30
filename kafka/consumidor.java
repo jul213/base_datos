@@ -19,6 +19,8 @@ public class Consumer {
         public List<TopicPartition> assignedPartitions = new ArrayList<>();
 
         @Override
-        
+        public synchronized void onPartitionsAssigned(collection<TopicPartition> partitions){
+            
+        }
     }
 }
