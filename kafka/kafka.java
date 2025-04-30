@@ -13,7 +13,8 @@ public class AdminKafka {
 
     public static void main(String[] args){
         Properties props = new Properties;
-        
+        //donde se corre oracle y el puerto 
+        props.put("bootsrap.servers", "localhost:5000")
     }
 }
 
