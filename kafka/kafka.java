@@ -14,7 +14,11 @@ public class AdminKafka {
     public static void main(String[] args){
         Properties props = new Properties;
         //donde se corre oracle y el puerto 
-        props.put("bootsrap.servers", "localhost:5000")
+        props.put("bootsrap.servers", "localhost:5000");
+
+        //nombre de los servicios que se ejecutan en la instancia de base de datos
+        props.put("oracle.service.name", "jwt");
+        props.put("security.protocol", "PLAINTEXT");
     }
 }
 
