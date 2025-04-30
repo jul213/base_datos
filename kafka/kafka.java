@@ -27,7 +27,8 @@ public class AdminKafka {
 
                 CreateTopicsResult result = admin.createTopics(
                     // creamos el topico llamado teq con 10 particiones
-                    Arrays.asList(new NewTopic("TEQ", 10, (short) 0 ));
+                    Arrays.asList(new NewTopic("TEQ", 10, (short) 0 ))
+                );
 
                     try {
                         KafkaFuture<void> ftr= result.all();
@@ -37,7 +38,6 @@ public class AdminKafka {
                         throw new IlegalStateException(e);
                     }
                     System.out.println("perfect closing the admin OKAFKA now");
-                )
         } catch (Exception e){
             System.out.println("exception while creating the topic" + e);
             e.printStackTrace();
