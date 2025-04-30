@@ -16,6 +16,9 @@ import org.oracle.okafka.clients.consumer.KafkaConsumer;
 public class Consumer {
 
     static class ConsumerRebalance implements ConsumerRebalanceListener {
+        public List<TopicPartition> assignedPartitions = new ArrayList<>();
+
+        @Override
         
     }
 }
