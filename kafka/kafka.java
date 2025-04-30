@@ -19,12 +19,12 @@ public class AdminKafka {
         //nombre de los servicios que se ejecutan en la instancia de base de datos
         props.put("oracle.service.name", "jwt");
         props.put("security.protocol", "PLAINTEXT");
-
+        
+        //lugar donde estan las propiedades guardadas usuario y contraseña
+        props.put("oracle.net.tns_admin", ".");
 
         try (Admin admin = AdminClient.create(props)){
 
-            //lugar donde estan las propiedades guardadas usuario y contraseña
-            props.put("oracle.net.tns_admin", ".");
 
         }
     }
